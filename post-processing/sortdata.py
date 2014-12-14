@@ -1,5 +1,4 @@
 import json
-from pprint import pprint
 
 json_data = open('abp0809raw.json')
 data = json.load(json_data)

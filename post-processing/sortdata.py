@@ -1,6 +1,6 @@
 import json
 
-json_data = open('abp0809raw.json')
+json_data = open('abp1314raw.json')
 data = json.load(json_data)
 
 
@@ -16,10 +16,10 @@ for item in data:
     item["StudentAcctType"] = acct
 
 
-results = sorted(data, key = lambda item : int(item["AveragePoints"]), reverse = True)
+results = sorted(data, key = lambda item : item["ModuleCode"], reverse = False)
 
 
-with open('abp0809.json', 'w') as outfile:
+with open('abp1314.json', 'w') as outfile:
     json.dump(results, outfile);
 
 json_data.close()
